@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ryan Boulrice</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function checkFlags() {
+            const correctFlags = ["FLAG{hidden_flag_1}", "FLAG{hidden_flag_2}", "FLAG{hidden_flag_3}", "FLAG{hidden_flag_4}"];
+            let userFlags = [];
+            for (let i = 1; i <= 4; i++) {
+                userFlags.push(document.getElementById(`flag${i}`).value);
+            }
+            let correctCount = 0;
+            for (let i = 0; i < 4; i++) {
+                if (userFlags[i] === correctFlags[i]) {
+                    correctCount++;
+                }
+            }
+            alert(`You got ${correctCount} out of 4 flags correct.`);
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -21,15 +37,16 @@
         <section class="contact">
             <h2>Enter your flags:</h2>
             <ul>
-                <li>Flag 1:</li>
-                <li>Flag 2:</li>
-                <li>Flag 3:</li>
-                <li>Flag 4:</li>
+                <li>Flag 1: <input type="text" id="flag1"></li>
+                <li>Flag 2: <input type="text" id="flag2"></li>
+                <li>Flag 3: <input type="text" id="flag3"></li>
+                <li>Flag 4: <input type="text" id="flag4"></li>
             </ul>
+            <button onclick="checkFlags()">Submit</button>
         </section>
     </div>
     <footer>
-        <p></p>
+        <p>&copy;.</p>
     </footer>
 </body>
 </html>
