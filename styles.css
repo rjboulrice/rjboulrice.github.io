@@ -11,15 +11,15 @@ body {
 header {
     background-color: #2e8b57; /* Dark green */
     color: white;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 nav {
@@ -34,7 +34,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
 }
 
 nav ul li a {
@@ -54,29 +54,38 @@ nav ul li a:hover {
     margin: 2rem auto;
     padding: 2rem;
     background-color: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Section header styling */
-h2 {
+.container h2 {
     color: #2e8b57; /* Dark green */
     font-size: 2rem;
     border-bottom: 2px solid #2e8b57;
     padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-p, ul {
+/* Write-up section */
+.writeup {
+    margin-bottom: 2rem;
+}
+
+.writeup h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.writeup p {
     color: #555;
     line-height: 1.6;
     font-size: 1.1rem;
 }
 
-ul li {
-    margin-bottom: 1rem;
-}
-
+/* Input and button styling */
 input[type="text"] {
     margin-left: 1rem;
     padding: 0.5rem;
